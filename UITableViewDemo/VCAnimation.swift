@@ -15,11 +15,10 @@ class VCAnimation: UIViewController {
         performSegue(withIdentifier: "toVCSoundTable", sender: self)
     }
     
-    @IBAction func unwindToVCAnimation(_ unwindSegue: UIStoryboardSegue) {
-        let source = unwindSegue.source as? VCSoundTable
-        selectedSound = source?.selectedSound
-        lblSelectedSound.text = "Sound: \(selectedSound ?? "Nil")"
-    }
+    // Review 1
+    // @IBAction func unwindToVCAnimation
+    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -35,21 +35,16 @@ extension VCSoundTable: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        // cell.textLabel?.text = sounds[indexPath.row] //decated
-        var content = cell.defaultContentConfiguration()
-        content.text = sounds[indexPath.row]
-        content.secondaryText = "Soundtrack"
-        cell.contentConfiguration = content
-        return cell
+        cell.textLabel?.text = sounds[indexPath.row] //deprecated
+        // Update 1: Cấu trúc trên sẽ không được hỗ trợ nữa,
+        // thay vào đó chúng ta sẽ tiếp cận với một cách mới
     }
     
     // Xử lý sự kiện chọn một cell trong bảng
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
-        let content = cell?.contentConfiguration as? UIListContentConfiguration
+        // Review 2 & Update 2
+        // Truy cập thông tin của một Cell được chọn
         
-        selectedSound = content?.text ?? ""
-        print(selectedSound)
     }
 }
 
