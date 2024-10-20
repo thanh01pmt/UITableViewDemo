@@ -38,11 +38,13 @@ extension VCSoundTable: UITableViewDataSource, UITableViewDelegate {
         cell.textLabel?.text = sounds[indexPath.row] //deprecated
         // Update 1: Cấu trúc trên sẽ không được hỗ trợ nữa,
         // thay vào đó chúng ta sẽ tiếp cận với một cách mới
+        
+        return cell
     }
     
     // Xử lý sự kiện chọn một cell trong bảng
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // Review 2 & Update 2
+        // Review 4 & Update 2
         // Truy cập thông tin của một Cell được chọn
         
     }

@@ -12,13 +12,12 @@ class VCAnimation: UIViewController {
 
     @IBOutlet weak var lblSelectedSound: UILabel!
     @IBAction func selectSound(_ sender: Any) {
-        performSegue(withIdentifier: "toVCSoundTable", sender: self)
+        // Review 1
+        // performSegue
     }
     
-    // Review 1
+    // Review 2
     // @IBAction func unwindToVCAnimation
-    
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
